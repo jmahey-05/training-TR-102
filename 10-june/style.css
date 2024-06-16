@@ -1,0 +1,47 @@
+.heading{
+    
+    transition: 1s;
+
+}
+@keyframes change{
+    0%{
+        color: aliceblue;
+        background-color: red;
+    }
+    100%{
+        color: blueviolet;
+        background-color:beige;
+    }
+}
+.heading:hover{
+    animation: change 5s 100 ease-in-out;
+}
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    
+    position: absolute;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+        left: 0px;
+    }
+    50%{
+        transform: rotate(360deg);
+        left: 50%;
+    }
+    100%{
+        
+        transform: rotate(0deg);
+        left: 70%;
+    }
+}
+.square:hover{
+    cursor: pointer;
+    animation: rotate 5s 5 linear;
+}
+body{
+    width: 100vw;
+}
