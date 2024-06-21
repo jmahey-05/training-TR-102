@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <H1>Array Methods</H1>
+    <script>
+        let array = [10, 20, 30, 40, 50];
+        // let arr = new Array();
+
+        // array.forEach((element) => {
+        //     console.log(element);
+        // });
+
+        // arr = array.map((element) => {
+        //     return element / 2;
+        // })
+        // console.log(arr);
+
+        const obj = [
+            {
+                id : 1,
+                title : "Iphone 15",
+                category : "Electronics",
+                price: 110000,
+            },
+            {
+                id : 2,
+                title : "MacBook",
+                category : "Electronics",
+                price: 100000,
+            },
+            {
+                id : 3,
+                title : "Dairymilk Silk",
+                category : "Food",
+                price: 100,
+            },
+            {
+                id : 4,
+                title : "Maggie",
+                category : "Food",
+                price: 20,
+            }
+        ]
+
+        const product = obj.filter((items) => {
+            if(items.category === "Electronics"){
+                return items;
+            }
+        })
+        console.log(product);
+
+        const result = array.reduce((acc,curIndex)=>{
+            // console.log(acc + curIndex);
+            return acc+curIndex;
+        },0)
+        console.log(result);
+
+    </script>
+</body>
+
+</html>
