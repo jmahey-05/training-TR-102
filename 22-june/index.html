@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   setTimeout
+      setTimeout(() => {
+        console.log("heloo");
+      }, 5000);
+
+      setTimeout(() => {
+        for (let i = 0; i < 6; i++) {
+          console.log(i);
+        }
+      }, 5000);
+
+      //    setinterval
+      setInterval(() => {
+        console.log("heloo");
+      }, 5000);
+
+      //   callbackfun,synchronous js
+      function myFunc(greet) {
+        console.log(greet);
+      }
+
+      function firstGreet() {
+        myFunc("hello ,how r u");
+        console.log("where r u");
+      }
+
+      function secondGreet() {
+        myFunc("what's up");
+        console.log("okk!");
+      }
+      secondGreet();
+      firstGreet();
+
+      //    asynchronous js
+      function greet() {
+        setTimeout(() => {
+          console.log("helo");
+        }, 5000);
+        console.log("we r late");
+      }
+
+      greet();
+      console.log(
+        "settimeout will not work first in case of asyn js bcz we want no delay therefore all statements after timer will work first"
+      );
+
+      function greet1() {
+        setTimeout(() => {
+          console.log("helo");
+        }, 0);
+        console.log("we r late");
+      }
+
+      greet1();
+      console.log(
+        "settimeout will not work first in case of asyn js bcz we want no delay therefore all statements after timer will work first"
+      );
+    </script>
+  </body>
+</html>
