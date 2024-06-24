@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2 id="hrs">00</h2>
+        <h2>:</h2>
+        <h2 id="mins">00</h2>
+        <h2>:</h2>
+        <h2 id="secs">00</h2>
+    </div>
+    <script>
+        const hrs = document.getElementById("hrs");
+        const mins = document.getElementById("mins");
+        const secs = document.getElementById("secs");
+        let sec = 0;
+        let min = 0;
+        let hr=0;
+        setInterval(()=>{
+            sec++;
+            if(sec === 60){
+                sec = 0;
+                min++;
+            }else if(min === 60){
+                min = 0;
+                hr++;
+            }
+            
+            if(sec >= 10){
+            secs.innerText = sec;
+            }else if(min >= 10){
+            mins.innerText = min;
+            }else if(hr >= 10){
+            hrs.innerText = hr;
+            }else{
+            hrs.innerText = `0${hr}`;
+            mins.innerText = `0${min}`;
+            secs.innerText = `0${sec}`;
+            }
+        },1000)
+    </script>
+</body>
+</html>
