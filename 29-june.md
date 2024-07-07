@@ -1,4 +1,4 @@
- <h2>28 June 2024 - Topic covered Today</h2><br>
+ <h2>29 June 2024 - Topic covered Today</h2><br>
  <h4>Today we learned about</h4>
  <ul>
 
